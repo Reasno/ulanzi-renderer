@@ -1,0 +1,53 @@
+publish:
+  name: 发布显示槽位
+  description: 新增或更新一个参与优先级仲裁的 Ulanzi 显示槽位。
+  fields:
+    slot_id:
+      name: 槽位 ID
+      description: 显示槽位的唯一标识；再次使用相同 ID 会更新该槽位。
+      required: true
+      example: welcome
+      selector:
+        text:
+    priority:
+      name: 优先级
+      description: 槽位优先级，数字越小优先级越高。
+      required: true
+      example: 1
+      selector:
+        number:
+          mode: box
+          step: 1
+    payload:
+      name: Payload
+      description: 要发布到 Ulanzi 的结构化 MQTT payload。
+      required: true
+      example:
+        text: 欢迎回家
+        color: "#ffffff"
+      selector:
+        object:
+    ttl_seconds:
+      name: 有效时长
+      description: 槽位的有效时长（秒）；省略或设为 0 表示永不过期。
+      required: false
+      default: 0
+      example: 15
+      selector:
+        number:
+          min: 0
+          mode: box
+          step: 1
+          unit_of_measurement: s
+
+retract:
+  name: 撤回显示槽位
+  description: 按槽位 ID 撤回一个 Ulanzi 显示槽位；槽位不存在时也会成功。
+  fields:
+    slot_id:
+      name: 槽位 ID
+      description: 要撤回的显示槽位唯一标识。
+      required: true
+      example: welcome
+      selector:
+        text:
