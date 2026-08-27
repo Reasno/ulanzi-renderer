@@ -1,0 +1,20 @@
+"""Constants for the Ulanzi Renderer integration."""
+
+DOMAIN = "ulanzi_renderer"
+CONF_BROKER_HOST = "broker_host"
+CONF_BROKER_PORT = "broker_port"
+CONF_PREFIX = "prefix"
+DEFAULT_BROKER_HOST = "192.168.31.111"
+DEFAULT_BROKER_PORT = 1883
+DEFAULT_PREFIX = "ulanzi_aa68"
+DEFAULT_TICK_INTERVAL = 1
+SERVICE_PUBLISH = "publish"
+SERVICE_RETRACT = "retract"
+ATTR_SLOT_ID = "slot_id"
+ATTR_PRIORITY = "priority"
+ATTR_PAYLOAD = "payload"
+ATTR_TTL_SECONDS = "ttl_seconds"
+ENABLE_ENTITY_ID = "input_boolean.ulanzi_renderer_enabled"
+STATUS_ENTITY_ID = "sensor.ulanzi_renderer_status"
+SHADOW_HEAD_ENTITY_ID = "sensor.ulanzi_renderer_shadow_head"
+DATA_COORDINATOR = "coordinator"

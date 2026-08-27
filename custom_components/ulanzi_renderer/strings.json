@@ -1,0 +1,19 @@
+{
+  "title": "Ulanzi Renderer",
+  "config": {
+    "step": {
+      "user": {
+        "title": "配置 Ulanzi Renderer",
+        "description": "通过 Home Assistant 已配置的 MQTT 集成发布；broker 字段用于记录目标连接信息。",
+        "data": {
+          "broker_host": "Broker 地址",
+          "broker_port": "Broker 端口",
+          "prefix": "MQTT Prefix"
+        }
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "仅允许配置一个 Ulanzi Renderer 实例。"
+    }
+  }
+}

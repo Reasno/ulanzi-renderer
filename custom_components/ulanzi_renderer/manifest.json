@@ -1,0 +1,10 @@
+{
+  "domain": "ulanzi_renderer",
+  "name": "Ulanzi Renderer",
+  "codeowners": ["@guxi"],
+  "config_flow": true,
+  "dependencies": ["mqtt"],
+  "documentation": "https://github.com/guxi/ulanzi-renderer",
+  "iot_class": "local_push",
+  "version": "0.1.0"
+}
